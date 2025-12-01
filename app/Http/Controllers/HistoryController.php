@@ -26,7 +26,7 @@ class HistoryController extends Controller
         */
 
         // 3. Kirim data pesanan ke view
-        return view('history.index', [
+        return view('livewire.history.index', [
             'orders' => $orders,
         ]);
     }

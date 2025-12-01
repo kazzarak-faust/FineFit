@@ -25,7 +25,7 @@ class TrackingController extends Controller
                                 ->get();
                                 
         // Kirim data ke view tracking/index.blade.php
-        return view('tracking.index', [
+        return view('livewire.tracking.index', [
             'trackingOrders' => $trackingOrders,
         ]);
     }

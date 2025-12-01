@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TrackingController;
+use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Design\Index;
 
@@ -26,7 +27,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Checkout Page
     // Akan menggunakan CheckoutController@index atau serupa.
-    Route::view('checkout', 'checkout.index')
+    Route::get('/checkout', [CheckoutController::class, 'index'])
         ->name('checkout.index');
 
     // History Page
